@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Rewrite;
-using ReversePirate.Rewrite;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,14 +19,6 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.MapReverseProxy();
-
-if (!app.Environment.IsDevelopment())
-{
-	var rewriteOptions = new RewriteOptions()
-		.AddRedirectToDomainPermanent("arrr.umbraco.community");
-
-    app.UseRewriter(rewriteOptions);
-}
 
 app.UseHttpsRedirection();
 
