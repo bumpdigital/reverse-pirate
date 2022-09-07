@@ -1,0 +1,7 @@
+name = "boatswain"
+main = "src/index.ts"
+compatibility_date = "2022-09-07"
+
+routes = [
+  { pattern = "arrr.umbraco.community/*", zone_id = "5e39b9f575a1f3b2a42ac1ed454d3e04" }
+]
