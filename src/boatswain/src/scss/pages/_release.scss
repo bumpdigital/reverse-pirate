@@ -1,0 +1,459 @@
+.download.latest .dot {
+	margin-top: 2rem;
+}
+
+.download .dot.progress {
+	text-indent: .3rem;
+	text-align: center;
+	line-height: 2.8rem;
+}
+
+.download .dot.progress .counter {
+	font-size: 1.1rem;
+}
+
+
+.explain {
+	flex-direction: column;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+	}
+}
+
+.explain .changes small {
+	line-height: .5rem;
+}
+
+
+
+.chart {
+	position: absolute;
+	top: -4px;
+	left: -8px;
+	z-index: 1;
+}
+
+.chart .percentage {
+	display: inline-block;
+	position: absolute;
+	top: 9px;
+	left: 16px;
+	font-size: 1.1rem;
+	color: darken($color-our, 30%);
+}
+
+.chart canvas {
+	top: 1px;
+	position: absolute;
+	left: 5px;
+}
+
+.chart {
+	position: absolute;
+	top: -4px;
+	left: -8px;
+	z-index: 1;
+}
+
+
+
+.get-release {
+	line-height: 1.5;
+	padding: 3rem 0;
+	margin: 0 0 3.5rem ;
+	border-bottom: 1px solid darken(whitesmoke, 5%);
+}
+
+.get-release i {
+	font-size: 2.5rem;
+	line-height: 5rem;
+}
+
+.get-release h3 {
+	font-size: 1.1rem;
+	margin-bottom: .3rem;
+	color: $color-headline;
+}
+
+.get-release h3 a {
+	text-decoration: none;
+
+	&:hover {
+		color: $color-our;
+	}
+}
+
+.get-release p {
+	color: $color-headline;
+	font-size: .95rem;
+	line-height: 1.3;
+	margin-bottom: .5rem;
+}
+
+
+.get-release small {
+	font-size: .8rem;
+	color: rgba($color-text, .6);
+}
+
+
+.latest .dot.big {
+	margin-bottom: 30px;
+}
+
+
+.latest .explain h4 {
+	font-size: 2.5rem;
+}
+
+
+.latest .explain p {
+	font-size: 1.1rem;
+	color: $color-text;
+}
+
+.latest .explain .col-xs-12 {
+	min-height: 0;
+}
+
+
+
+
+// Single release page
+.release {
+
+	.markdown-syntax {
+
+		p, li, ul {
+			color: $color-headline;
+			font-size: .95rem;
+		}
+
+
+		strong {
+			color: $color-headline;
+		}
+
+
+		a {
+			text-decoration: underline;
+			font-family: $font-family;
+		}
+
+
+		p + p {
+			margin-bottom: 15px !important;
+		}
+
+
+		h1, h2, h3 {
+			color: $color-headline;
+		}
+
+
+		h1, {
+			font-size: 2rem;
+		}
+
+
+		h2 {
+			font-size: 1.3rem;
+		}
+
+
+		h3 {
+			font-size: 1.1rem;
+		}
+
+
+		ul li {
+			margin-bottom: .5rem;
+			line-height: 1.5;
+		}
+	}
+}
+
+
+.releaseTable {
+
+	.col-xs-3 {
+
+		&:first-child {
+			.progress {
+				.top {
+					display: none;
+				}
+			}
+		}
+
+
+		&:nth-last-child(2) {
+
+
+			.small:last-child {
+
+
+				.v-line {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+// Progress page
+.inprogress {
+
+	.dot.big.progress {
+		text-indent: 0;
+		border: none;
+
+		.v-line {
+			top: 60px;
+			left: 28px;
+
+			&.top {
+				top: -80px;
+			}
+		}
+
+		.h-line {
+		  top: 28px;
+		}
+
+	}
+	
+	.chart {
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		line-height: 3rem;
+
+		.percentage {
+			position: initial;
+		}
+
+		canvas {
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+
+// Roadmap page
+.plannedreleases {
+	.dot.big {
+		text-indent: 0;
+		line-height: 3rem;
+	}
+	.chart {
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+
+		.percentage {
+			position: initial;
+		}
+	}
+}
+
+.chart p, .chart div.percentage, .release .chart p {
+	color: white;
+}
+
+.release-page .explain h2 {
+	margin: 0;
+	font-size: 2em;
+	color: rgba(0,0,0,.8);
+}
+
+.release-page .explain small {
+	margin-bottom: 0;
+}
+
+.release-page .dot {
+	border: none;
+}
+
+.release-page .dot.big {
+	position: relative;
+	text-indent: 0;
+	margin: 0;
+}
+
+.release-page .chart {
+	height: 60px;
+	width: 60px;
+	top: initial;
+	left: initial;
+	text-align: center;
+}
+
+.release-page .chart p {
+	vertical-align: middle;
+	line-height: 3.7rem;
+	display: inline-block;
+}
+
+.release-page .chart canvas {
+	top: 0px;
+	left: 0px;
+}
+
+.statuses ul {
+	list-style-type: none;
+}
+.statuses ul li  {
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+.statuses li:before {
+	position: absolute;
+	top: -4px;
+	left: -25px;
+	font-size: 1.5em;
+}
+
+
+
+
+.release-progress-indicator {
+	flex: 1 1 auto;
+}
+
+.release-progress-action {
+	flex: 1 1 auto;
+
+	margin-top: 30px;
+}
+
+.release-progress-version {
+	margin-left: 15px;
+}
+
+
+.release-section-group {
+	flex: 1 1 100%;
+	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	@media (min-width: 768px) {
+		flex: 1 1 47%;
+	    padding: 0 3% 0 0;
+		align-items: flex-start;
+		text-align: left;
+	}
+}
+
+.release-section-group:nth-child(even) {
+	flex: 1 1 100%;
+	padding: 0;
+
+	@media (min-width: 768px) {
+		flex: 1 1 47%;
+	    padding: 0 0 0 3%;
+	}
+}
+
+.release-section-action {
+	height: 80px;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	box-sizing: border-box;
+}
+
+
+.release-section code {
+	overflow: auto;
+
+	background-color: #333;
+	background-clip: padding-box;
+
+	color: #fff;
+	font-size: 12px;
+	line-height: 1.4em;
+	text-align: center;
+	text-decoration: none;
+
+
+	padding: 14px 16px 14px 16px;
+
+	width: auto;
+	border-radius: 5px;
+    border: none;
+}
+.release-section code a {
+	text-decoration: none;
+}
+
+.release-section + .release-section {
+	margin-top: 30px;
+}
+
+.release-section-group + .release-section-group {
+	margin-top: 30px;
+
+	@media (min-width: 768px) {
+		margin-top: 0;
+	}
+}
+
+.release-page h2 {
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.release-page h3 {
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+
+
+// Other files
+.release-other-files {
+	margin-top: 3rem;
+}
+
+.release-other-files h3 {
+	font-size: 1.1rem;
+	margin-bottom: 5px;
+}
+
+.release-other-files small {
+	font-size: .8rem;
+	color: rgba($color-text, .5);
+}
+
+
+.release-other-files .release {
+	min-height: auto;
+	margin-bottom: 30px;
+}
+
+.release-other-files .release a {
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.release-other-files .release p {
+	margin-top: 0;
+}

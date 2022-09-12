@@ -1,0 +1,148 @@
+button.button, .button, a.button {
+	background: $color-blue;
+	padding: 12px 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border: none;
+	border-radius: $base-border-radius;
+	-webkit-appearance: none;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	margin: 0;
+	cursor: pointer;
+	user-select: none;
+	box-shadow: $base-box-shadow;
+
+	@include transition(background, .1s);
+
+
+	&:hover {
+		background: lighten($color-blue, 5%);
+	}
+
+
+	span {
+		position: relative;
+		z-index: 20;
+	}
+
+
+	&.green {
+		background: $color-green;
+		border: 1px solid $color-green;
+
+		&:hover {
+			background: lighten($color-green, 5%);
+			border: 1px solid lighten($color-green, 5%);
+		}
+	}
+
+
+
+
+	&.white {
+		background: #fff;
+		border: 1px solid #fff;
+		color: $color-text;
+
+		&:hover {
+			background: rgba(#fff, .7);
+			border: 1px solid rgba(#fff, .7);
+		}
+	}
+
+
+	&.red {
+		background: $color-red;
+		border: 1px solid $color-red;
+		color: #fff;
+
+		&:hover {
+			background: lighten($color-red, 5%);
+			border: 1px solid lighten($color-red, 5%);
+		}
+	}
+
+
+
+
+	&.transparent {
+		border: 1px solid darken($color-space, 15%);
+		color: darken($color-space, 15%);
+		background: none;
+
+		&:hover {
+			background: none;
+			color: #000;
+			border-color: #000;
+		}
+
+		.ink {
+			background: rgba($color-green, 0.3);
+		}
+	}
+
+
+
+	&.pink {
+		background: $color-pink;
+		border: 1px solid $color-pink;
+
+		&:hover {
+			background: lighten($color-pink, 5%);
+			border: 1px solid lighten($color-pink, 5%);
+		}
+	}
+
+
+
+	&.large {
+		font-size: 1.175rem;
+	}
+
+
+
+	&.tiny {
+		padding: 10px 20px;
+		font-size: .9rem;
+	}
+}
+
+
+
+button.button {
+	font-family: $font-family;
+	cursor: pointer;
+	outline: none;
+
+	&:active, &:focus {
+		outline: none;
+	}
+}
+
+
+// Click animation
+.ink {
+	display: block;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 100%;
+	transform: scale(0);
+}
+
+.animate {
+    animation:ripple 0.65s $easeExpo;
+}
+
+
+@keyframes ripple {
+    100% {
+    	opacity: 0;
+    	transform: scale(2);
+    }
+}

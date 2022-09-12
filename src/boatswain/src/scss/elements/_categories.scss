@@ -1,0 +1,44 @@
+.category,
+.version {
+	display: inline-block;
+	margin: 0;
+
+	a,
+	span.cat {
+		display: inline-block;
+		text-decoration: none;
+		text-transform: capitalize;
+		font-size: $font-size-small;
+		line-height: 1.25em;
+		border-radius: $base-border-radius;
+		padding: 6px 12px;
+		max-width: 100%;
+		background: $color-identity-grey;
+		color: $color-identity-dark;
+		word-wrap: break-word;
+		white-space: pre-wrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	a {
+		@include transition(background, 0.1s);
+	}
+
+	&.frontend,
+	&.core {
+		a,
+		span.cat {
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+	}
+
+	.version {
+		a,
+		span.cat {
+			cursor: auto;
+		}
+	}
+}
