@@ -1,6 +1,6 @@
 import { getAssetFromKV } from "@cloudflare/kv-asset-handler"
 import manifestJSON from '__STATIC_CONTENT_MANIFEST'
-import { FooterElementHandler, HeadElementHandler, TextReplacementHandler } from "./handlers";
+import { ContentReplacementHandler } from "./rewriter";
 
 const assetManifest = JSON.parse(manifestJSON)
 
@@ -28,7 +28,7 @@ async function handleHtmlRequest(request: Request): Promise<Response> {
 	const res = await fetch(request);
 	const contentType = res.headers.get('Content-Type');
 
-	if (contentType?.startsWith('text/html')) {
+	if (res.status < 300 && contentType?.startsWith('text/html')) {
 		return rewriter.transform(res);
 	} else {
 		return res;
@@ -36,9 +36,7 @@ async function handleHtmlRequest(request: Request): Promise<Response> {
 }
 
 const rewriter = new HTMLRewriter()
-	.on('head', new HeadElementHandler())
-	.on('footer', new FooterElementHandler())
-	.on('*', new TextReplacementHandler());
+	.on('*', new ContentReplacementHandler());
 
 export default {
 	async fetch(request: Request, env: { __STATIC_CONTENT: String; }, ctx: ExecutionContext): Promise<Response> {
