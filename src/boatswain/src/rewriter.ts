@@ -12,6 +12,13 @@ export class ContentReplacementHandler implements HTMLRewriterElementContentHand
     if (element.tagName === 'footer') {
       element.append('<p>🏴‍☠️ An act of piracy by the crew of <a href="https://bump.digital/" target="_blank">Bump Digital.</a>', { html: true })
     }
+
+    if (element.tagName === 'a') {
+      const attr = element.getAttribute('href');
+      if (attr?.includes('our.umbraco.com')) {
+        element.setAttribute('href', attr.replace('our.umbraco.com', 'arrr.umbraco.community'))
+      }
+    }
   }
 
   text(text: Text): void | Promise<void> {
