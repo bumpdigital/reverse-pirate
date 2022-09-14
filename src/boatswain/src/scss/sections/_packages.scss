@@ -28,6 +28,7 @@ section.packages {
     }
 
     .package-box {
+        background-color: rgba(#fff, 0.75);
         display: flex;
         flex-flow: column;
         align-items: stretch;
@@ -55,7 +56,7 @@ section.packages {
             @include box_shadow(2);
 
             .package-badge span.package-number {
-                background-color: #3544b1;
+                background-color: $color-blue;
                 color: #fff;
             }
         }

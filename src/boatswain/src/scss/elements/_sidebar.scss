@@ -43,7 +43,7 @@ html {
         display: table-cell;
         vertical-align: top;
         width: $sb-width;
-        background-color: white;
+        background-color: transparent;
         height: 100%;
 
         @media (max-width:992px) {
@@ -240,8 +240,8 @@ details.secondary_nav {
     margin-top: 38px;
 
     summary {
-        background: #3544b1;
-        border: 1px solid #3544b1;
+        background: $color-blue;
+        border: 1px solid $color-blue;
         border-radius: 3px;
         padding: 10px 21px;
         //text-align: center;
@@ -259,8 +259,8 @@ details.secondary_nav {
 /* Style the summary when details box is open */
 details.secondary_nav[open] {
     summary {
-        background: #3544b1;
-        border: 1px solid #3544b1;
+        background: $color-blue;
+        border: 1px solid $color-blue;
         border-radius: 3px 3px 0 0;
         padding: 10px 21px;
         //text-align: center;
@@ -280,7 +280,7 @@ details.secondary_nav[open] {
             color: #000;
 
             &:hover {
-                background: #3544b1;
+                background: $color-blue;
                 color: #fff;
             }
         }

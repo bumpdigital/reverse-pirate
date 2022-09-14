@@ -3,7 +3,7 @@
 // // // //
 
 	// Typography colors
-	$color-black: 		#000000;
+	$color-black: 		rgb(32, 16, 16);
 	$color-grey: 		#565656;
 	$color-light: 		#a9a9a9;
 	$color-white:		#ffffff;
@@ -12,17 +12,16 @@
 
 	// Element colors
 	$color-light-grey: 	#f1f1f1;
-	$color-blue:		#3544b1;
-	$color-green:		#3544b1;
+	$color-blue:	 $color-identity-blue;
+	$color-green:		$color-identity-blue;
 	$color-turquoise: 	#43cfcf;
 	$color-orange: 		#EB7439;
 	$color-red:			#fe6561;
 	$color-pink:		#E13E8F;
 	$color-our-green:	#56f272;
-	$color-joker:		#3544b1;
+	$color-joker:		$color-blue;
 
-
-	$color-our: 		$color-joker;
+	$color-our: 		$color-black;
 
 	$color-roles-purple: #df89ff;
 	$color-roles-orange: #e8b142;
@@ -154,7 +153,7 @@
 $color-notification-green: $color-notification-blue;
 	$color-notification-spaced: 			#383D43;
 	$color-notification-yellow: 			#fcf5e2;
-	$color-notification-white: 				#fffff;
+	$color-notification-white: 				#ffffff;
 	$color-notification-red: 				#FC353A;
 
 
