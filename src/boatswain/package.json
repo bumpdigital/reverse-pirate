@@ -4,13 +4,14 @@
   "devDependencies": {
     "@cloudflare/kv-asset-handler": "^0.2.0",
     "@cloudflare/workers-types": "^3.16.0",
+    "sass": "^1.54.9",
     "typescript": "^4.8.2",
     "wrangler": "2.0.29"
   },
   "private": true,
   "scripts": {
-    "sass": "sass --style=compressed src/scss/style.scss public/assets/arrr.css",
-    "start": "npm run sass && wrangler dev",
+    "sass": "npx sass --style=compressed src/scss/style.scss public/assets/arrr.css",
+    "dev": "npm run sass && wrangler dev",
     "deploy": "npm run sass && wrangler publish"
   }
 }
