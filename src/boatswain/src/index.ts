@@ -9,6 +9,8 @@ const staticFiles = ['css', 'png', 'jpg', 'svg', 'map'];
 export const isStatic = (request: Request) => staticFiles.some(f => request.url.endsWith('.' + f));
 
 async function handleStaticRequest(request: Request, env: { __STATIC_CONTENT: String; }, ctx: ExecutionContext) {
+	// Do or do not. There is no try. 
+	// We can't easily check if an item exists, we just need to try and get it.
 	try {
 		return await getAssetFromKV({
 			request,
@@ -20,6 +22,7 @@ async function handleStaticRequest(request: Request, env: { __STATIC_CONTENT: St
 			ASSET_MANIFEST: assetManifest,
 		},);
 	} catch {
+		// fetch directly from the site instead
 		return await fetch(request);
 	}
 }

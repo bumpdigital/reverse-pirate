@@ -22,8 +22,17 @@ export class ContentReplacementHandler implements HTMLRewriterElementContentHand
   }
 
   text(text: Text): void | Promise<void> {
+
+    // we can't be too clever here as text is streamed in chunks that have no context
+
+    // replace specific multi-word target phrases that are common to 'Our'
+    // e.g. karma points => doubloons
+    // community member names etc.
     var rePhrased = rephrase(text.text);
+
+    // then perform single word translations
     var translated = translate(rePhrased)
+
     text.replace(translated, { html: true });
   }
 }
