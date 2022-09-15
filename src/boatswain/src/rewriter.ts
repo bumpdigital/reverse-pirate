@@ -10,7 +10,7 @@ export class ContentReplacementHandler implements HTMLRewriterElementContentHand
     }
 
     if (element.tagName === 'footer') {
-      element.append('<p>🏴‍☠️ An act of piracy by the crew of <a href="https://bump.digital/" target="_blank">Bump Digital.</a>', { html: true })
+      element.append('<p>🏴‍☠️ An act o\' piracy by the crew o\' thar fearsome <a href="https://bump.digital/" target="_blank">Bump Digital.</a>', { html: true })
     }
 
     if (element.tagName === 'a') {
