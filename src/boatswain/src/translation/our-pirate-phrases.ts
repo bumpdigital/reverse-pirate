@@ -1,28 +1,31 @@
 import { Dictionary } from "./dictionary";
 
-// This is a case sensitive list and should include:
+// This is a case sensitive list and includes:
 // 1. Our terminology that we want to replace with specifically piratey words
 // 2. Pirate names for community members
-// 3. Other replacements where case is important
+// 3. Other replacements where case matters (general names, terminology)
+// Text replacements are run in order, bear that mind if you need to, or don't want to, run subsequent replacements
 const piratePhrases: Dictionary<string> = {
 
   // common 'our' terms.
   "our.umbraco.com": "arrr.umbraco.community",
   "Our Umbraco": "Arrr Umbraco",
   "karma points": "doubloons",
-  "C-Trib": "Shipwright",
-  "MVP 12X": "Pirate Lord",
-  "MVP 11X": "Admiral",
-  "MVP 10X": "Commodore",
-  "MVP 9X": "Captain",
-  "MVP 8X": "Quartermaster",
-  "MVP 7X": "Boatswain",
-  "MVP 6X": "Sailing Master",
-  "MVP 5X": "Gunner",
-  "MVP 4X": "Carpenter",
-  "MVP 3X": "Master at Arms",
-  "MVP 2X": "Armourer",
+
+  "c-trib": "Shipwright",
   "MVP": "Mate",
+  "Mate 12x": "Pirate Lord",
+  "Mate 11x": "Admiral",
+  "Mate 10x": "Commodore",
+  "Mate 9x": "Captain",
+  "Mate 8x": "Quartermaster",
+  "Mate 7x": "Boatswain",
+  "Mate 6x": "Sailing Master",
+  "Mate 5x": "Gunner",
+  "Mate 4x": "Carpenter",
+  "Mate 3x": "Master at Arms",
+  "Mate 2x": "Armourer",
+
   "HQ": "Home Port",
 
   // people - community members, package owners, MVPs etc.
