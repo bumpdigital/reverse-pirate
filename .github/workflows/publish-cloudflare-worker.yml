@@ -1,0 +1,26 @@
+name: Build & Publish Cloudflare Worker
+
+on:
+  push:
+    branches: [ "main" ]
+    
+env:
+  NODE_VERSION: 16.17
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ NODE_VERSION }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ NODE_VERSION }}
+
+    - name: Build & Publish
+      run: |
+        npm ci
+        npm run deploy
+        
