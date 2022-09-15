@@ -134,7 +134,7 @@ export const dictionary: Dictionary<string | string[]> = {
   "to": "t'",
   "together": "t'gether",
   "treasure": "booty",
-  "usync" : "usink",
+  "usync" : "yeSink",
   "vodka": "rum",
   "was": "be",
   "water": "grog",
