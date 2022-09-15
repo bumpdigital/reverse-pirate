@@ -10,6 +10,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/boatswain
     
     steps:
     - uses: actions/checkout@v3
@@ -19,8 +22,10 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
 
+    - name: npm ci
+      run: npm ci
+
     - name: Build & Publish
-      run: |
-        npm ci
-        npm run deploy
-        
+      run: npm run deploy
+      env: 
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
