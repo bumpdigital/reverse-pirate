@@ -25,8 +25,9 @@ const piratePhrases: Dictionary<string> = {
   "Mate 4x": "Carpenter",
   "Mate 3x": "Master at Arms",
   "Mate 2x": "Armourer",
-
   "HQ": "Home Port",
+
+  "Privacy Policy" : "Piracy Policy",
 
   // people - community members, package owners, MVPs etc.
 
