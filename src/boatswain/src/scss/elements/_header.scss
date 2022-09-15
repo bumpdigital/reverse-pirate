@@ -55,7 +55,7 @@ header {
 
 
 	.logo {
-		background: url('../images/logo.svg');
+		background: url('/assets/images/logo.svg');
 		background-repeat: no-repeat;
 		background-position: left center;
 		background-size: 30px auto;
@@ -183,7 +183,7 @@ header {
 		}
 
 		input[type=submit] {
-			background: #fff url('../images/search-dark.png');
+			background: #fff url('/assets/images/search-dark.png');
 			background-repeat: no-repeat;
 			background-size: 24px 24px;
 			background-position: center;
