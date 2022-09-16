@@ -27,7 +27,7 @@ const piratePhrases: Dictionary<string> = {
   "Mate 2x": "Armourer",
   "HQ": "Home Port",
 
-  "Privacy Policy" : "Piracy Policy",
+  "Privacy Policy": "Piracy Policy",
 
   // people - community members, package owners, MVPs etc.
 
@@ -109,4 +109,4 @@ const piratePhrases: Dictionary<string> = {
   "John": "Long John",
 }
 
-export const phrases = new Map(Object.entries(piratePhrases));
+export const phrases = piratePhrases;

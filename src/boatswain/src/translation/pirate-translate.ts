@@ -30,10 +30,16 @@ SOFTWARE.
 import { phrases } from "./our-pirate-phrases";
 import { dictionary } from "./pirate-words";
 
+const phraseRegexes = Object.entries(phrases)
+  .map((kv) => {
+    let reg = new RegExp(`(^|\\s)${kv[0]}(\\s|$)`, 'gm');
+    return { regex: reg, replacement: kv[1] }
+  });
+
 export const rephrase = (text: string) => {
 
-  phrases.forEach((v, k) => {
-    text = text.replaceAll(k, v)
+  phraseRegexes.forEach((phrase) => {
+    text = text.replaceAll(phrase.regex, `$1${phrase.replacement}$2`)
   });
 
   return text;
