@@ -100,7 +100,7 @@ const piratePhrases: Dictionary<string> = {
 
   // packages
 
-  "Bergmania.OpenStreetMaps": "Bergmania.OpenSeaCharts",
+  "Bergmania.OpenStreetMap": "Bergmania.OpenSeaChart",
   "Terratype": "Aquatype",
   "Umbraco Forms": "Umbraco Parchment",
   "Contentment": "Be Ye Contented?",
