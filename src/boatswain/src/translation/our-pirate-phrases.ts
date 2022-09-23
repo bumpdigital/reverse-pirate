@@ -92,6 +92,7 @@ const piratePhrases: Dictionary<string> = {
   "Rachel Breeze": "Rachel \"Three Sheets to the\" Breeze",
   "Ravi Motha": "Ravi \"The Ravager\" Motha",
   "Richard Ockerby": "Riches Ockerby",
+  "Rune Hem Strand": "Rune Hearties Beach",
   "Sophie": "Swabbie Sophie",
   "Søren Kottal": "Søren \"Swabbie\" Kottal",
   "Tiffany": "Tricorn Tiff",
